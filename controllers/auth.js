@@ -4,6 +4,12 @@ const jwt = require("jsonwebtoken");
 
 const signup = async (request, response) => {
   const { username, email, password } = request.body;
+  const found = await User.findOne({ email });
+  if (found) {
+    return response.status(409).json({
+      error: "Email already exists",
+    });
+  }
 
   const saltRounds = 10;
   const passwordHash = await bcrypt.hash(password, saltRounds);
@@ -39,7 +45,7 @@ const login = async (request, response) => {
   const passwordCorrect = user === null ? false : await bcrypt.compare(password, user.passwordHash);
   if (!(user && passwordCorrect)) {
     return response.status(401).json({
-      error: "invalid email or password",
+      error: "Invalid email or password",
     });
   }
 
