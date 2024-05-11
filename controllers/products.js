@@ -26,6 +26,7 @@ const getBestsellers = async (request, response) => {
 const getCategories = async (request, response) => {
   const products = await Product.find({});
   const categories = new Set(products.flatMap((product) => product.category));
+  console.log(categories);
   response.json([...categories]);
 };
 
