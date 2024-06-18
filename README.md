@@ -26,7 +26,7 @@ This project serves as the robust backend foundation for an e-commerce website. 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/ecommerce-website-backend.git
+   git clone https://github.com/Terminal239/ecommerce-backend.git
    ```
 
 2. **Install Dependencies:**
@@ -57,29 +57,3 @@ This project serves as the robust backend foundation for an e-commerce website. 
   ```bash
   npm start
   ```
-
-## Running Tests
-
-```bash
-npm test
-```
-
-(Note: This assumes you've written tests using Node.js's built-in `assert` module or another testing framework.)
-
-## API Endpoints (Provide a brief overview or link to your API documentation)
-
-```
-/api/products
-/api/users
-/api/auth
-/api/orders
-...
-```
-
-## Contributing
-
-Contributions are welcome! Please follow our contribution guidelines. (Link to CONTRIBUTING.md if you have one)
-
-## License
-
-This project is licensed under the ISC License.
